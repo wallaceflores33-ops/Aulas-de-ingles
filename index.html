@@ -155,14 +155,15 @@ a{text-decoration:none;color:inherit}
 
 .bonus-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(6,1fr);
   gap:1.25rem;
   position:relative;z-index:1;
 }
-
-/* Cards 4 e 5 ficam na segunda linha centralizados */
-.bonus-grid .bonus-card:nth-child(4){grid-column:1/2;margin-left:calc(50% + .625rem)}
-.bonus-grid .bonus-card:nth-child(5){grid-column:2/3}
+.bonus-grid .bonus-card:nth-child(1){grid-column:1/3}
+.bonus-grid .bonus-card:nth-child(2){grid-column:3/5}
+.bonus-grid .bonus-card:nth-child(3){grid-column:5/7}
+.bonus-grid .bonus-card:nth-child(4){grid-column:2/4}
+.bonus-grid .bonus-card:nth-child(5){grid-column:4/6}
 
 .bonus-card{
   background:var(--surf);
@@ -247,13 +248,15 @@ a{text-decoration:none;color:inherit}
 
 /* ===== RESPONSIVE BONUS ===== */
 @media(max-width:940px){
-  .bonus-grid{grid-template-columns:1fr 1fr}
-  .bonus-grid .bonus-card:nth-child(4){grid-column:auto;margin-left:0}
+  .bonus-grid{grid-template-columns:repeat(2,1fr)}
+  .bonus-grid .bonus-card:nth-child(1){grid-column:auto}
+  .bonus-grid .bonus-card:nth-child(2){grid-column:auto}
+  .bonus-grid .bonus-card:nth-child(3){grid-column:auto}
+  .bonus-grid .bonus-card:nth-child(4){grid-column:auto}
   .bonus-grid .bonus-card:nth-child(5){grid-column:auto}
 }
 @media(max-width:600px){
   .bonus-grid{grid-template-columns:1fr}
-  .bonus-grid .bonus-card:nth-child(4){grid-column:auto;margin-left:0}
 }
 #dor{
   padding:6rem 0;
@@ -740,7 +743,7 @@ a{text-decoration:none;color:inherit}
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
       </div>
       <h3 class="bc-title">Kit de Avaliação de Nível — Provas com Gabarito</h3>
-      <p class="bc-desc">Provas prontas de nivelamento e evolução para cada nível, com gabarito e rubrica de pontuação. Comprova o avanço do aluno com um documento real — aumenta retenção e indicação.</p>
+      <p class="bc-desc">Provas prontas de nivelamento para cada nível, com gabarito e rubrica de pontuação. Comprova o avanço do aluno com um documento real — aumenta retenção e indicação.</p>
       <div class="bc-footer">
         <span class="bc-tags"><span>5 provas prontas</span><span>Com gabarito</span><span>Comprova evolução</span></span>
         <span class="bc-val">R$37</span>
